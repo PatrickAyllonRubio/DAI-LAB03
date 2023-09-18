@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa de Cambio</title>
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+            color:dimgray;
+            font-weight: 500;
+        }
+        p{
+            font-size: 15px;
+            margin-bottom: 0.5px;
+            text-align: center;
+        }
+        .radio-group {
+            display: inline-block;
+        }
+        .opciones{
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+        }
+        .subtitulos{
+            margin-left: 625px;
+            line-height: 30px;
+        }
+        .opcion1{
+            margin-left: 625px;
+            width: 15px;
+            height: 15px;
+        }
+        .monto{
+            margin-left: 665px;
+            width: 130px;
+            height: 15px;
+        }
+        .cotizar{
+            margin-left: 705px;
+            margin-top: 10px;
+            background-color: dimgrey;
+            color: white;
+            height: 25px;
+            width: 70px;
+            border-radius: 3px;
+        }
+    </style>
+    <script>
+        function calculateTotal() {
+            const monto = parseFloat(document.getElementById("monto").value);
+            const monedaEnvio = document.querySelector('input[name="monedaEnvio"]:checked').value;
+            const monedaCambio = document.querySelector('input[name="monedaCambio"]:checked').value;
+            const tasasConversion = {
+                Soles: {
+                    Dolares: 0.28,
+                    Euros: 0.24
+                },
+                Dolares: {
+                    Soles: 3.57,
+                    Euros: 0.87
+                },
+                Euros: {
+                    Soles: 4.22,
+                    Dolares: 1.15
+                }
+            };
+            const montoConvertido = monto * tasasConversion[monedaEnvio][monedaCambio];
+            alert(`El monto equivalente en ${monedaCambio} es: ${montoConvertido.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body>
+    <p>CASA DE CAMBIO</p>
+    <form>
+        <label class="subtitulos">Seleccionar moneda a enviar:</label><br>
+        <div class="radio-group">
+            <input class="opcion1" type="radio" id="SolesEnvio" name="monedaEnvio" value="Soles">
+            <label for="SolesEnvio">Soles</label>
+        </div>
+        
+        <div class="radio-group">
+            <input class="opciones" type="radio" id="DolaresEnvio" name="monedaEnvio" value="Dolares">
+            <label for="DolaresEnvio">Dolares</label>
+        </div>
+        
+        <div class="radio-group">
+            <input class="opciones" type="radio" id="EurosEnvio" name="monedaEnvio" value="Euros">
+            <label for="EurosEnvio">Euros</label> 
+        </div> <br>
+        <label class="subtitulos">Seleccionar la moneda de cambio:</label><br>
+        <div class="radio-group">
+            <input class="opcion1" type="radio" id="SolesCambio" name="monedaCambio" value="Soles">
+            <label for="SolesCambio">Soles</label>
+        </div>
+        
+        <div class="radio-group">
+            <input class="opciones" type="radio" id="DolaresCambio" name="monedaCambio" value="Dolares">
+            <label for="DolaresCambio">Dolares</label>
+        </div>
+        
+        <div class="radio-group">
+            <input class="opciones" type="radio" id="EurosCambio" name="monedaCambio" value="Euros">
+            <label for="EurosCambio">Euros</label>
+        </div><br>
+        <label type="monto" class="subtitulos">Ingresa monto:</label><br>
+        <input class="monto" type="text" id="monto" name="monto"><br>
+        <button class="cotizar" type="button" onclick="calculateTotal()"><b>Cotizar</b></button>
+    </form>
+</body>
+</html>

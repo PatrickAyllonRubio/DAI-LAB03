@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title> Presentación personal</title>
+        <style> 
+            body { 
+                background-image: url("https://img.freepik.com/vector-premium/fondo-pared-ladrillo-oscuro-abstracto-diseno-creativo-su-sitio-web_518299-623.jpg"); 
+                background-position: center 25%; 
+            } 
+            
+        </style>
+        <link rel="stylesheet" href="CSS/Lab03_estilos.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var titulo = document.getElementById("miTitulo");
+              titulo.classList.add("animate-slideIn");
+            });         
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var enviarBtn = document.getElementById("enviarBtn");
+              enviarBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                alert("Tu pregunta fue enviada con éxito");
+              });
+            });
+          </script>
+    </head>
+    <body>
+        <div>
+            <h1 class="t_principal" id="miTitulo">MI PRESENTACIÓN PERSONAL</h1>
+            <hr>
+        </div>
+        <div class="drch v-line "><img class="imgRedonda" src="https://img.freepik.com/vector-premium/ilustracion-avatar-estudiante-icono-perfil-usuario-avatar-jovenes_118339-4405.jpg" alt="">
+            <hr class="arreglo3">
+            <h1 class="tituloIP" >INFORMACIÓN PERSONAL</h1>>
+            <div>
+            </div>
+                <h2 class="subtituloIP">NOMBRE</h2><br>
+                <h2 class="subtituloIP">APELLIDOS</h2><br>
+                <h2 class="subtituloIP">CORREO</h2><br>
+                <h2 class="subtituloIP">EDAD</h2><br>
+                <h2 class="subtituloIP">CENTRO DE ESTUDIOS</h2><br>
+                <form>
+                    <Label for="">Preguntame algo :</Label>
+                    <input type="text">
+                    <input type="submit" value="Enviar" id="enviarBtn">
+                </form>
+            </div>
+            <div class="drch textIP">
+                <p class="textizq">Patrick Hugo</p>
+                <p class="textizq">Ayllón Rubio</p>
+                <p class="textizq">patrick.ayllon@tecsup.edu.pe</p>
+                <p class="textizq">19</p>
+                <p class="textizq">TECSUP</p>
+            </div>
+            <div class="redes-sociales drch textIP">
+                <a href="https://www.facebook.com/patrick.ayllonrubio.3?mibextid=ZbWKwL" target="_blank">
+                    <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/facebook_16423.png" alt="Facebook">
+                </a>
+                <a href="wa.me/51983764047" target="_blank">
+                    <img src="https://cdn.icon-icons.com/icons2/3685/PNG/512/whatsapp_logo_icon_229310.png" alt="Twitter">
+                </a>
+                <a href="https://twitter.com/tu_cuenta_de_twitter" target="_blank">
+                    <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338392_1280.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+        <div>
+            <table border="1">
+                <tr>
+                    <th><h1 class="caja_titulo plomo titulos">Sobre mi:</h1></th>
+                    <td> <p> Me llamo Patrick Ayllón estudiante de Tecsup, me apasiona aprender 
+                        <br>sobre las nuevas tecnologías que se emplean hoy en día. 
+                        <br> Mis hobbies son escuchar música, jugar ajedrez y practicar natación. 
+                        <br> Me gusta investigar por mi cuenta para saber más a profundidad sobre 
+                        <br> los temas dictados en clases.</p>
+                            <center>
+                                <audio controls>
+                                    <source src="Archivos multimedia/Audio2.mp3" type="audio/mpeg">
+                                </audio>
+                            </center>
+                    </td>   
+                    
+                </tr>
+                <tr> 
+                    <th><h1 class="caja_titulo plomo titulos2">Tecnologías y lenguajes <br>
+                        de Programación:</h1></th>
+                    <td>
+                        <ul>
+                            <li>Python
+                                <img class="drch imgtabla1" width="70px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="">
+                                <img class="drch imgtabla2" width="90px"  src="https://www.manualweb.net/img/logos/java.png" alt="">
+
+                            </li>
+                            <br>
+                            <li>Java</li>
+                            <br>
+                            <li>C++
+                                <img class="drch imgtabla3" width="60px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/640px-ISO_C%2B%2B_Logo.svg.png" alt="">
+                            </li>
+                            <br>
+                            <li>HTML
+                                <img class="drch imgtabla4" width="90px"  src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="">
+                            </li>
+                            <br>
+                            <li>CSS
+                                <img class="drch imgtabla5" width="80px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="">
+                            </li>
+                        </ul>   
+                    </td>
+                </tr>
+                <tr>
+                    <th><h1 class="caja_titulo3 plomo titulos">Formación Profesional:</h1></th>
+                    <th><p class="arreglo2">Diseño y desarrollo de software</p>
+                    <video  class="borde arreglo" width="400px" controls>
+                        <source src="Archivos multimedia/Video2.mp4" type="video/mp4">
+                    </video>
+                    <br>
+                    </th>
+                </tr>
+                <tr>
+                    <th><h1 class="caja_titulo plomo titulos">Idiomas:</h1></th>
+                    <th><p style="font-size: 30px;" class="arreglo2">Ingles &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspCastellano</p>
+                        <img class="bandera" width="340px" height="190px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_United_States_%281795-1818%29.svg/1280px-Flag_of_the_United_States_%281795-1818%29.svg.png" alt="">
+                        <img class="bandera" width="340px" height="190px" src="data:image/png;base64,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" alt="">
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
